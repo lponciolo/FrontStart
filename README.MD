@@ -1,10 +1,10 @@
 # Frontend students stuff
 
-##[Frontend roadmap]
+## [Frontend roadmap]
 
-#Day 1 - HTML Basics 
+# Day 1 - HTML Basics 
 
-##Recommended IDE's (integrates development enviroment)
+## Recommended IDE's (integrates development enviroment)
 
 [vs code] - free - lot of plugins
 
@@ -18,17 +18,17 @@
 
 **(in case of doubt install [vs code])**
 
-##HTML
+## HTML
 
 ### 📚Documentation 📚
 [w3school] - a lot of HTML basics
 
-###🔥 Challenges 🔥
+### 🔥 Challenges 🔥
 [freecodecamp] - spent hours here
 
 [w3school exercises] - more exercises
 
-###✔️ Day1 TO DO :
+### ✔️ Day1 TO DO :
 1. Sit down and code
 2. Sit down and code
 3. Bring issues, your problems will be learning for everyone
@@ -37,7 +37,7 @@
 
 if you are stuck with a challenge bring it to the next meeting, keep going with other challenges
 
-####See you next Saturday
+#### See you next Saturday
 
 [freecodecamp]: <https://github.com/joemccann/dillinger>
 [Frontend Roadmap]: <https://roadmap.sh/frontend>
