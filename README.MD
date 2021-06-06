@@ -37,7 +37,7 @@
 
 if you are stuck with a challenge bring it to the next meeting, keep going with other challenges
 
-#### See you next Saturday
+#### See you next Sunday
 
 [freecodecamp]: <https://github.com/joemccann/dillinger>
 [Frontend Roadmap]: <https://roadmap.sh/frontend>
