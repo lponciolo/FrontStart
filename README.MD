@@ -39,7 +39,7 @@ if you are stuck with a challenge bring it to the next meeting, keep going with 
 
 #### See you next Sunday
 
-[freecodecamp]: <https://github.com/joemccann/dillinger>
+[freecodecamp]: <https://www.freecodecamp.org/learn/responsive-web-design/>
 [Frontend Roadmap]: <https://roadmap.sh/frontend>
 [w3school]: <https://www.w3schools.com/html/default.asp>
 [w3school exercises]: <https://www.w3schools.com/html/html_exercises.asp>
