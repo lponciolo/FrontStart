@@ -4,7 +4,9 @@
 
 # Day 1 - HTML Basics 
 
-## Recommended IDE's (integrates development enviroment)
+<h2 id="header-ides">
+Recommended IDE's (integrated development enviroment)
+</h2> 
 
 [vs code] - free - lot of plugins
 
@@ -55,10 +57,13 @@ if you are stuck with a challenge bring it to the next meeting, keep going with 
 
 ## ✔️ Day 2 - CSS - TO DO :
 1. Do all [freecodecamp basic css challenges]
+2. Install one of  [Recommended IDE's](#header-ides)
 3. Copy [Homero's webpage] ( tip => position: absolute, top: 10px, left: 10px )
 4. Bonus track: check this [flex guide]
 5. Check this: [grid guide]
 6. more complex challenges: [challenge css 1],[challenge css 2],[challenge css 3]
+
+
 
 #### See you next Sunday
 
