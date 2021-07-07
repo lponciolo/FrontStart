@@ -20,7 +20,7 @@ Recommended IDE's (integrated development enviroment)
 
 **(in case of doubt install [vs code])**
 
-## HTML
+## Day 1 - HTML
 
 ### 📚Documentation HTML 📚
 [w3school] - a lot of HTML basics
@@ -30,7 +30,7 @@ Recommended IDE's (integrated development enviroment)
 
 [w3school exercises] - more exercises
 
-### ✔️ Day 1 - HTML - TO DO :
+### ✔️ HTML - TO DO :
 1. Sit down and code
 2. Sit down and code
 3. Bring issues, your problems will be learning for everyone
@@ -39,7 +39,7 @@ Recommended IDE's (integrated development enviroment)
 
 if you are stuck with a challenge bring it to the next meeting, keep going with other challenges
 
-## CSS
+## Day 2 - CSS
 
 ### 📚Documentation CSS 📚
 
@@ -55,7 +55,7 @@ if you are stuck with a challenge bring it to the next meeting, keep going with 
 [frontendmentor] - more challenges ( do only the html & css challenges )
 
 
-## ✔️ Day 2 - CSS - TO DO :
+## ✔️ CSS - TO DO :
 1. Do all [freecodecamp basic css challenges]
 2. Install one of  [Recommended IDE's](#header-ides)
 3. Copy [Homero's webpage] ( tip => position: absolute, top: 10px, left: 10px )
@@ -63,7 +63,20 @@ if you are stuck with a challenge bring it to the next meeting, keep going with 
 5. Check this: [grid guide]
 6. more complex challenges: [challenge css 1],[challenge css 2],[challenge css 3]
 
+## Day 3 - JS
 
+### 📚Documentation JS 📚
+
+[javascript.info] - good documentation
+[w3school js] - basic tutorial
+[https://www.tutorialspoint.com/javascript/]
+### 🔥 Challenges JS🔥
+
+[freecodecamp basic js challenges]
+
+## ✔️ JS - TO DO :
+
+Do all [freecodecamp basic js challenges]
 
 #### See you next Sunday
 
@@ -87,3 +100,6 @@ if you are stuck with a challenge bring it to the next meeting, keep going with 
 [challenge css 2]: <https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62>
 [challenge css 3]: <https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7>
 [frontendmentor]: <https://www.frontendmentor.io/challenges>
+[freecodecamp basic js challenges]: <https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript/>
+[javascript.info]: <https://javascript.info/>
+[w3school js] <https://www.w3schools.com/js/>

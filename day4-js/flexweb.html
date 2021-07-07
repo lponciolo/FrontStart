@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="flexweb.css" rel="stylesheet" type="text/css">
+    <title>Title</title>
+    <style></style>
+</head>
+<body class="no-margin">
+<div>
+    <!--    <script>-->
+    <!--        // alert('Hola Mundo!');-->
+    <!--        console.log("Hola");-->
+    <!--        const edadDelFormulario = undefined-->
+    <!--        let array = [10,20,30,40,50,60,70,80,90,16,16,147,124,72,78258,23,822,58,28]-->
+    <!--        let guille = {-->
+    <!--            casado: false,-->
+    <!--            nombre: {-->
+    <!--                apodo: "Guillote",-->
+    <!--                pila: "Guillermo",-->
+    <!--                segundo: "Alejandro",-->
+    <!--                apellido: "Seclen Alfaro"-->
+    <!--            },-->
+    <!--            edad: edadDelFormulario-->
+    <!--        }-->
+    <!--        let cumsum = 0-->
+    <!--        for (let index in array ){-->
+    <!--            cumsum = cumsum + array[index]-->
+    <!--            console.log(cumsum)-->
+    <!--        }-->
+    <!--        console.log("fin")-->
+    <!--    </script>-->
+
+    <div ></div>
+    <div id="txt" class="flex-box">
+        <div class="time item color-1">
+            <label class="title">div 1</label>
+        </div>
+        <div class="time item color-2">
+            <label class="title">div 2</label>
+        </div>
+        <div  class="time item color-3">
+            <label class="title">div 3</label>
+        </div>
+        <div  class="time item color-4">
+            <label class="title">div 4</label>
+        </div>
+    </div>
+</div>
+<script>
+    function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        relojElements = document.getElementsByClassName("time")
+        for (i = 0; i < relojElements.length; i++) {
+            relojElements[i].innerHTML =  h + ":" + m + ":" + s;
+        }
+    }
+    setInterval(startTime,1000)
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
+        return i;
+    }
+
+    startTime()
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.flex-box{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 20em;
+}
+
+.item{
+    color: wheat;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: system-ui;
+    padding: 5em 0;
+    flex: 0 0 20%;
+}
+.title{
+    text-align: center;
+}
+.color-1{
+    background-color: #20639b;
+}
+
+.color-2{
+    background-color: #3caea3;
+}
+
+.color-3{
+    background-color: #f6d55c;
+}
+.color-4{
+    background-color: #f65c5c;
+}
+
+
+
+.no-margin{
+    margin: 0;
+}
