@@ -1,0 +1,65 @@
+.chocolate.marroc {
+    color: chocolate;
+}
+
+.chocolate.roger {
+    color: saddlebrown;
+}
+
+.chocolate {
+    font-style: italic;
+}
+
+.roger {
+    font-size: 2em;
+}
+.otra-clase{
+    font-style: italic;
+}
+.blue {
+    color: teal;
+}
+
+.red {
+    color: red;
+}
+
+b {
+    color: black;
+}
+
+b:hover {
+    color: red;
+    cursor: pointer;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.background {
+    background-color: seashell;
+}
+
+#parrafo3 {
+    color: hsl(100, 15%, 15%);
+}
+
+.texto-con-link {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: teal;
+}
+
+.texto-con-link > a {
+    text-decoration: unset;
+    color: inherit;
+}
+
+@media screen and (max-width: 500px) {
+    .background {
+        text-align: center;
+        font-size: 13px;
+    }
+}
