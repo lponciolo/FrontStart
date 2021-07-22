@@ -1,0 +1,208 @@
+:root {
+    font-family: 'Space Mono', monospace;
+    --thm-primary: hsl(172, 67%, 45%);
+    --thm-very-dark-cyan: hsl(183, 100%, 15%);
+    --thm-gray-cyan-1: hsl(186, 14%, 43%);
+    --thm-gray-cyan-2: hsl(184, 14%, 56%);
+    --thm-gray-light-1: hsl(189, 41%, 97%);
+    --thm-gray-light-2: hsl(185, 41%, 84%);
+    font-size: 24px;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: -.1em;
+}
+
+.buttons-grid-item {
+    justify-self: stretch;
+    margin: .3em 0;
+    width: calc(100% - .6em); /*a este le podía haber puesto margenes a la derecha e izquierda, pero me hubiera quedado el primero separado de la linea a la izquierda que acomoda los titulos y todos los bloques,o para evitar eso le saco al 100% del ancho dos veces .2em que es loq ue valen los margenes de arriba y abajo, de esa forma el grid se acomoda, con ese ancho, pero no dejando margenes en los limites*/
+    font-family: 'Space Mono';
+    background-color: var(--thm-very-dark-cyan);
+    color: white;
+    border-radius: .3em;
+    border-width: 0;
+    font-size: .8em;
+    padding: .3em;
+    font-weight: bold;
+}
+
+.buttons-grid-item:hover{
+    cursor: pointer;
+}
+
+.buttons-grid-item:active{
+    color: var(--thm-very-dark-cyan);
+    background-color: var(--thm-primary);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--thm-gray-light-2);
+    margin: 0;
+}
+
+.logo {
+    align-self: center;
+    margin-bottom: 2em;
+}
+
+
+.floating-block {
+
+    display: flex;
+    width: 100%;
+    max-width: 50em;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-1 {
+    flex-basis: 48%;
+}
+
+.main-card {
+    padding: 1.5em;
+    border-radius: 1em;
+    background-color: white;
+    max-width: 33em;
+}
+
+
+label {
+    font-size: .5em;
+    font-weight: bold;
+    color: var(--thm-gray-cyan-1);
+}
+
+.white-text {
+    font-size: .5em;
+    margin: 0;
+    color: var(--thm-gray-light-1);
+}
+
+.grey-text {
+    font-size: .5em;
+    margin: 0;
+    color: var(--thm-gray-cyan-1);
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.number-div {
+    line-height: 1.8em;
+    background-color: var(--thm-gray-light-1);
+    font-family: 'Space Mono', monospace;
+    margin-right: .4em;
+    border-radius: .2em;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+input {
+    border: none;
+    border-width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input:focus, custom {
+    box-shadow: none;
+    border-color: transparent;
+    outline-color: transparent;
+}
+
+input::placeholder {
+    color: var(--thm-very-dark-cyan);
+}
+
+input{
+    cursor: pointer;
+}
+
+.number-input {
+    width: 81%;
+    color: var(--thm-very-dark-cyan);
+    border: none;
+    background-color: var(--thm-gray-light-1);
+    font-family: "Space Mono", monospace;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    margin: .1em;
+}
+
+.number-div:focus-within, .custom-input:focus {
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px .1em var(--thm-primary);
+
+}
+
+.title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.money-icon {
+    margin-left: 1em;
+}
+
+.parent-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+    background-color: var(--thm-very-dark-cyan);
+    padding: 1.5em;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.reset-div {
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+.reset-button {
+    width: 100%;
+    line-height: 2em;
+    background-color: var(--thm-primary);
+    color: var(--thm-very-dark-cyan);
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    font-size: .8em;
+    border: none;
+    border-radius: .3em;
+}
+
+.result-number {
+    font-size: 1.5em;
+    color: var(--thm-primary);
+}
+
