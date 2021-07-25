@@ -15,7 +15,7 @@
     margin-left: -.1em;
 }
 
-.buttons-grid-item {
+.buttons-grid-item, .input-grid-item {
     justify-self: stretch;
     margin: .3em 0;
     width: calc(100% - .6em); /*a este le podía haber puesto margenes a la derecha e izquierda, pero me hubiera quedado el primero separado de la linea a la izquierda que acomoda los titulos y todos los bloques,o para evitar eso le saco al 100% del ancho dos veces .2em que es loq ue valen los margenes de arriba y abajo, de esa forma el grid se acomoda, con ese ancho, pero no dejando margenes en los limites*/
@@ -29,11 +29,16 @@
     font-weight: bold;
 }
 
-.buttons-grid-item:hover{
+.buttons-grid-item:hover {
     cursor: pointer;
 }
 
-.buttons-grid-item:active{
+.buttons-grid-item:active {
+    color: var(--thm-very-dark-cyan);
+    background-color: var(--thm-primary);
+}
+
+.button-active {
     color: var(--thm-very-dark-cyan);
     background-color: var(--thm-primary);
 }
@@ -104,7 +109,6 @@ label {
     line-height: 1.8em;
     background-color: var(--thm-gray-light-1);
     font-family: 'Space Mono', monospace;
-    margin-right: .4em;
     border-radius: .2em;
     display: flex;
     align-items: center;
@@ -122,6 +126,20 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+.flex-title-error-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message {
+    color: orange;
+    display: none;
+}
+
+.show-error {
+    display: block;
+}
+
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -136,13 +154,18 @@ input::placeholder {
     color: var(--thm-very-dark-cyan);
 }
 
-input{
+input {
     cursor: pointer;
 }
 
+#custom-tip-input {
+    text-align: center;
+}
+
 .number-input {
-    width: 81%;
+    flex: 1;
     color: var(--thm-very-dark-cyan);
+
     border: none;
     background-color: var(--thm-gray-light-1);
     font-family: "Space Mono", monospace;
@@ -199,6 +222,12 @@ input{
     font-size: .8em;
     border: none;
     border-radius: .3em;
+    transition: background-color .1s;
+    cursor: pointer;
+}
+
+.reset-button:active {
+    background-color: var(--thm-gray-light-2);
 }
 
 .result-number {

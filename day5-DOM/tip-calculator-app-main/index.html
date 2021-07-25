@@ -22,12 +22,15 @@
             <div class="floating-block">
                 <div class="flex-1">
                     <div>
-                        <label for="bill">
-                            Bill
-                        </label>
+                        <div class="flex-title-error-box">
+                            <label for="bill-input">
+                                Bill
+                            </label>
+                            <label class="error-message" id="bill-error">can't be zero, champagne</label>
+                        </div>
                         <div class="number-div mb-1" tabindex="0">
                             <img class="money-icon" src="images/icon-dollar.svg">
-                            <input class="number-input" id="bill-input" type="number" placeholder="0"/>
+                            <input class="number-input" id="bill-input" type="number" placeholder="0" required/>
                         </div>
 
                         <div class="flex-1">
@@ -36,31 +39,34 @@
                             </label>
                         </div>
                         <div class="buttons-grid mb-1">
-                            <button class="buttons-grid-item"  onclick="getResult(0.05)">
+                            <button class="buttons-grid-item" id="tip-button-05" onclick="getResult(0.05,'tip-button-05')">
                                 5%
                             </button>
-                            <button class="buttons-grid-item" onclick="getResult(0.1)">
+                            <button class="buttons-grid-item" id="tip-button-10" onclick="getResult(0.1, 'tip-button-10')">
                                 10%
                             </button>
-                            <button class="buttons-grid-item" onclick="getResult(0.15)">
+                            <button class="buttons-grid-item" id="tip-button-15" onclick="getResult(0.15, 'tip-button-15')">
                                 15%
                             </button>
-                            <button class="buttons-grid-item" onclick="getResult(0.25)">
+                            <button class="buttons-grid-item" id="tip-button-25" onclick="getResult(0.25, 'tip-button-25')">
                                 25%
                             </button>
-                            <button class="buttons-grid-item" onclick="getResult(0.5)">
+                            <button class="buttons-grid-item" id="tip-button-50" onclick="getResult(0.5, 'tip-button-50')">
                                 50%
                             </button>
-                            <input class="buttons-grid-item number-input custom-input" placeholder="Custom" type="number"/>
+                            <input class="input-grid-item number-input custom-input" id="custom-tip-input" min="0.01" placeholder="Custom" type="number"/>
 
                         </div>
+                        <div class="flex-title-error-box">
+                            <label >
+                                Number of People
+                            </label>
 
-                        <label>
-                            Number of People
-                        </label>
+                            <label class="error-message" id="people-error">can't be zero, champagne</label>
+                        </div>
                         <div class="number-div mb-1">
                             <img class="money-icon" src="images/icon-person.svg">
-                            <input class="number-input" id="people-input" type="number" min="0.01" step="0.01" max="2500" placeholder="0"/>
+                            <input class="number-input" min="1" id="people-input" type="number" step="1" placeholder="0" required/>
                         </div>
                     </div>
                 </div>
@@ -80,8 +86,8 @@
                             </div>
                             <label id="total-per-person" class="result-number">$0</label>
                         </div>
-                        <div class="reset-div ">
-                            <button class="reset-button">RESET</button>
+                        <div class="reset-div">
+                            <button class="reset-button" onclick="cleanResult()">RESET</button>
                         </div>
                     </div>
                 </div>
@@ -89,28 +95,6 @@
         </div>
     </div>
 </div>
-<script>
-    function getNumberFromInputID(inputId) {
-        let inputNumber = document.getElementById(inputId).value
-        if (inputNumber.length < 1 ) return 0
-        return inputNumber
-    }
-
-    function printResult(result, id) {
-        const element = document.getElementById(id);
-        element.innerHTML = "$" + result.toFixed(2);
-    }
-
-    function getResult(tip) {
-        const billInputNumber = getNumberFromInputID('bill-input');
-        const peopleInputNumber = getNumberFromInputID('people-input');
-
-        const totalPerPerson =  billInputNumber * (1 + tip) / peopleInputNumber;
-        const tipPerPerson = billInputNumber * tip / peopleInputNumber;
-
-        printResult(totalPerPerson, 'total-per-person');
-        printResult(tipPerPerson, 'tip-per-person')
-    }
-</script>
+<script src="scripts.js"></script>
 </body>
 </html>
