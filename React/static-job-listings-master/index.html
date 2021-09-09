@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./jscript.js"></script>
+  <title>Frontend Mentor | Job Listings</title>
+</head>
+
+<body>
+  <div id="header-color"></div>
+  <img src="images/bg-header-desktop.svg" id="header-desktop" alt="Header image">
+  <div class="vertical-flex">
+    <div class="filters-section tags hidden" id="filters-heading">
+      <!--Top TAG Filters-->
+      <button id="Frontend-tag" class="top-tag hidden" onclick="removeFilterTag('data-role','Frontend'); hideTag('Frontend-tag'); checkTagFilters()"><p>Frontend</p></button>
+      <button id="Backend-tag" class="top-tag hidden" onclick="removeFilterTag('data-role','Backend'); hideTag('Backend-tag'); checkTagFilters()"><p>Backend</p></button>
+      <button id="Fullstack-tag" class="top-tag hidden" onclick="removeFilterTag('data-role','Fullstack'); hideTag('Fullstack-tag'); checkTagFilters()"><p>Fullstack</p></button>
+      <button id="Junior-tag" class="top-tag hidden" onclick="removeFilterTag('data-level','Junior'); hideTag('Junior-tag');checkTagFilters()"><p>Junior</p></button>
+      <button id="Midweight-tag" class="top-tag hidden" onclick="removeFilterTag('data-level','Midweight'); hideTag('Midweight-tag');checkTagFilters()"><p>Midweight</p></button>
+      <button id="Senior-tag" class="top-tag hidden" onclick="removeFilterTag('data-level','Senior'); hideTag('Senior-tag');checkTagFilters()"><p>Senior</p></button>
+      <button id="Python-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','Python'); hideTag('Python-tag');checkTagFilters()"><p>CSS</p></button>
+      <button id="Ruby-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','Ruby'); hideTag('Ruby-tag');checkTagFilters()"><p>CSS</p></button>
+      <button id="JavaScript-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','JavaScript'); hideTag('JavaScript-tag');checkTagFilters()"><p>JavaScript</p></button>
+      <button id="HTML-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','HTML'); hideTag('HTML-tag');checkTagFilters()"><p>HTML</p></button>
+      <button id="CSS-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','CSS'); hideTag('CSS-tag');checkTagFilters()"><p>CSS</p></button>
+      <button id="React-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','React'); hideTag('React-tag');checkTagFilters()"><p>React</p></button>
+      <button id="Sass-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','Sass'); hideTag('Sass-tag');checkTagFilters()"><p>Sass</p></button>
+      <button id="Vue-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','Vue'); hideTag('Vue-tag');checkTagFilters()"><p>Vue</p></button>
+      <button id="Django-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','Django'); hideTag('Django-tag');checkTagFilters()"><p>Django</p></button>
+      <button id="RoR-tag" class="top-tag hidden" onclick="removeFilterTag('data-languages','RoR'); hideTag('RoR-tag');checkTagFilters()"><p>RoR</p></button>
+      <!--Clear Filter-->
+    </div>
+    <button id="clear-button" class="hidden" onclick="clearFilters()">Clear</button>
+    <!-- Item Start -->
+    <div class="listed-item" data-role="Frontend" data-level="Senior" data-languages="HTML CSS JavaScript">        
+      <div class="roundmask">
+        <a href="#"><img src="images/photosnap.svg" alt="Photosnap Logo"></a>
+      </div>
+      <div class="listed-item-l">
+        <div class="top-line">
+          <p class="item-name">Photosnap</p>
+          <button class="btn_green_background tag-on-item-name">New!</button>
+          <button class="btn_dark_background tag-on-item-name">Featured</button>
+        </div>
+        <h1 class="color_fifth category">Senior Frontend Developer</h1>
+        <div class="bottom-line">
+          <span>1d ago</span>
+          <p class="info-separator">·</p>
+          <span>Full Time</span>
+          <p class="info-separator">·</p>
+          <span>USA only</span>
+        </div>
+     </div>
+      <div class="listed-item-r">
+        <div class="tags">
+          <!-- Role -->
+          <button class="item-role" onclick="filterTag('data-role','Frontend'); showTag('Frontend-tag');showTagHeading()"><p>Frontend</p></button>
+          <!-- Level -->
+          <button class="item-level" onclick="filterTag('data-level','Senior'); showTag('Senior-tag');showTagHeading()"><p>Senior</p></button>
+          <!-- Languages -->
+          <button class="item-languages" onclick="filterTag('data-languages','HTML'); showTag('HTML-tag');showTagHeading()"><p>HTML</p></button>
+          <button class="item-languages" onclick="filterTag('data-languages','CSS'); showTag('CSS-tag');showTagHeading()"><p>CSS</p></button>
+          <button class="item-languages" onclick="filterTag('data-languages','JavaScript'); showTag('JavaScript-tag');showTagHeading()"><p>JavaScript</p></button>
+        </div>
+      </div>
+    </div>
+  <!-- Item End -->
+
+  <!-- Item Start -->
+  <div class="listed-item" data-role="Fullstack" data-level="Midweight" data-languages="Python React">        
+    <div class="roundmask">
+      <a href="#"><img src="images/manage.svg" alt="Manage Logo"></a>
+    </div>
+    <div class="listed-item-l">
+      <div class="top-line">
+        <p class="item-name">Manage</p>
+        <button class="btn_green_background tag-on-item-name">New!</button>
+        <button class="btn_dark_background tag-on-item-name">Featured</button>
+      </div>
+      <h1 class="color_fifth category">Fullstack Developer</h1>
+      <div class="bottom-line">
+        <span>1d ago</span>
+        <p class="info-separator">·</p>
+        <span>Part Time</span>
+        <p class="info-separator">·</p>
+        <span>Remote</span>
+      </div>
+   </div>
+    <div class="listed-item-r">
+      <div class="tags">
+        <!-- Role -->
+        <button class="item-role" onclick="filterTag('data-role','Fullstack'); showTag('Fullstack-tag');showTagHeading()"><p>Fullstack</p></button>
+        <!-- Level -->
+        <button class="item-level" onclick="filterTag('data-level','Midweight'); showTag('Midweight-tag');showTagHeading()"><p>Midweight</p></button>
+        <!-- Languages -->
+        <button class="item-languages" onclick="filterTag('data-languages','Python'); showTag('Python-tag');showTagHeading()"><p>Python</p></button>
+        <button class="item-languages" onclick="filterTag('data-languages','React'); showTag('React-tag');showTagHeading()"><p>React</p></button>
+      </div>
+    </div>
+  </div>
+  <!-- Item End -->
+
+  <!-- Item Start -->
+  <div class="listed-item" data-role="Fullstack" data-level="Junior" data-languages="JavaScript React Sass">        
+    <div class="roundmask">
+      <a href="#"><img src="images/account.svg" alt="Acount Logo"></a>
+    </div>
+    <div class="listed-item-l">
+      <div class="top-line">
+        <p class="item-name">Account</p>
+        <button class="btn_green_background tag-on-item-name">New!</button>
+      </div>
+      <h1 class="color_fifth category">Junior Frontend Developer</h1>
+      <div class="bottom-line">
+        <span>2d ago</span>
+        <p class="info-separator">·</p>
+        <span>Part Time</span>
+        <p class="info-separator">·</p>
+        <span>USA only</span>
+      </div>
+   </div>
+    <div class="listed-item-r">
+      <div class="tags">
+        <!-- Role -->
+        <button class="item-role" onclick="filterTag('data-role','Fullstack'); showTag('Fullstack-tag');showTagHeading()"><p>Fullstack</p></button>
+        <!-- Level -->
+        <button class="item-level" onclick="filterTag('data-level','Junior'); showTag('Junior-tag');showTagHeading()"><p>Junior</p></button>
+        <!-- Languages -->
+        <button class="item-languages" onclick="filterTag('data-languages','JavaScript'); showTag('JavaScript-tag');showTagHeading()"><p>JavaScript</p></button>
+        <button class="item-languages" onclick="filterTag('data-languages','React'); showTag('React-tag');showTagHeading()"><p>React</p></button>
+        <!-- Tools -->
+        <button class="item-languages" onclick="filterTag('data-languages','Sass'); showTag('Sass-tag');showTagHeading()"><p>Sass</p></button>
+      </div>
+    </div>
+  </div>
+  <!-- Item End -->
+
+  <!-- Item Start -->
+  <div class="listed-item" data-role="Frontend" data-level="Junior" data-languages="CSS JavaScript">        
+    <div class="roundmask">
+      <a href="#"><img src="images/myhome.svg" alt="My Home Logo"></a>
+    </div>
+    <div class="listed-item-l">
+      <div class="top-line">
+        <p class="item-name">MyHome</p>
+        <button class="btn_green_background tag-on-item-name">New!</button>
+      </div>
+      <h1 class="color_fifth category">Junior Frontend Developer</h1>
+      <div class="bottom-line">
+        <span>5d ago</span>
+        <p class="info-separator">·</p>
+        <span>Contract</span>
+        <p class="info-separator">·</p>
+        <span>USA only</span>
+      </div>
+    </div>
+    <div class="listed-item-r">
+      <div class="tags">
+        <!-- Role -->
+        <button class="item-role" onclick="filterTag('data-role','Frontend'); showTag('Frontend-tag');showTagHeading()"><p>Frontend</p></button>
+        <!-- Level -->
+        <button class="item-level" onclick="filterTag('data-level','Junior'); showTag('Junior-tag');showTagHeading()"><p>Junior</p></button>
+        <!-- Languages -->
+        <button class="item-languages" onclick="filterTag('data-languages','CSS'); showTag('CSS-tag');showTagHeading()"><p>CSS</p></button>
+        <button class="item-languages" onclick="filterTag('data-languages','JavaScript'); showTag('JavaScript-tag');showTagHeading()"><p>JavaScript</p></button>
+      </div>
+    </div>
+  </div>
+  <!-- Item End -->
+
+  <!-- Item Start -->
+  <div class="listed-item" data-role="Fullstack" data-level="Midweight" data-languages="JavaScript Ruby Sass">        
+    <div class="roundmask">
+      <a href="#"><img src="images/loop-studios.svg" alt="Loop Studios Logo"></a>
+    </div>
+    <div class="listed-item-l">
+      <div class="top-line">
+        <p class="item-name">Loop Studios</p>
+        <button class="btn_green_background tag-on-item-name">New!</button>
+      </div>
+      <h1 class="color_fifth category">Software Engineer</h1>
+      <div class="bottom-line">
+        <span>1w ago</span>
+        <p class="info-separator">·</p>
+        <span>Full Time</span>
+        <p class="info-separator">·</p>
+        <span>Worldwide</span>
+      </div>
+    </div>
+    <div class="listed-item-r">
+      <div class="tags">
+        <!-- Role -->
+        <button class="item-role" onclick="filterTag('data-role','Fullstack'); showTag('Fullstack-tag');showTagHeading()"><p>Fullstack</p></button>
+        <!-- Level -->
+        <button class="item-level" onclick="filterTag('data-level','Midweight'); showTag('Midweight-tag');showTagHeading()"><p>Midweight</p></button>
+        <!-- Languages -->
+        <button class="item-languages" onclick="filterTag('data-languages','JavaScript'); showTag('JavaScript-tag');showTagHeading()"><p>JavaScript</p></button>
+        <!-- Tools -->
+        <button class="item-languages" onclick="filterTag('data-languages','Ruby'); showTag('Ruby-tag');showTagHeading()"><p>Ruby</p></button>
+        <button class="item-languages" onclick="filterTag('data-languages','Sass'); showTag('Sass-tag');showTagHeading()"><p>Sass</p></button>
+      </div>
+    </div>
+  </div>
+  <!-- Item End -->
+
+  <!-- Item Start -->
+  <div class="listed-item" data-role="Backend" data-level="Junior" data-languages="Ruby RoR">        
+    <div class="roundmask">
+      <a href="#"><img src="images/faceit.svg" alt="Face It Logo"></a>
+    </div>
+    <div class="listed-item-l">
+      <div class="top-line">
+        <p class="item-name">FaceIt</p>
+      </div>
+      <h1 class="color_fifth category">Junior Backend Developer</h1>
+      <div class="bottom-line">
+        <span>2w ago</span>
+        <p class="info-separator">·</p>
+        <span>Full Time</span>
+        <p class="info-separator">·</p>
+        <span>UK only</span>
+      </div>
+  </div>
+  <div class="listed-item-r">
+      <div class="tags">
+        <!-- Role -->
+        <button class="item-role" onclick="filterTag('data-role','Backend'); showTag('Backend-tag');showTagHeading()"><p>Backend</p></button>
+        <!-- Level -->
+        <button class="item-level" onclick="filterTag('data-level','Junior'); showTag('Junior-tag');showTagHeading()"><p>Junior</p></button>
+        <!-- Languages -->
+        <button class="item-languages" onclick="filterTag('data-languages','Ruby'); showTag('Ruby-tag');showTagHeading()"><p>Ruby</p></button>
+        <!-- Tools -->
+        <button class="item-languages" onclick="filterTag('data-languages','RoR'); showTag('RoR-tag');showTagHeading()"><p>RoR</p></button>
+      </div>
+    </div>
+  </div>
+  <!-- Item End -->
+
+  <!-- Item Start -->
+  <div class="listed-item" data-role="Frontend" data-level="Junior" data-languages="HTML JavaScript Sass">        
+    <div class="roundmask">
+      <a href="#"><img src="images/shortly.svg" alt="Shortly Logo"></a>
+    </div>
+    <div class="listed-item-l">
+      <div class="top-line">
+        <p class="item-name">Shortly</p>
+      </div>
+      <h1 class="color_fifth category">Junior Developer</h1>
+      <div class="bottom-line">
+        <span>2w ago</span>
+        <p class="info-separator">·</p>
+        <span>Full Time</span>
+        <p class="info-separator">·</p>
+        <span>Worldwide</span>
+      </div>
+  </div>
+  <div class="listed-item-r">
+      <div class="tags">
+        <!-- Role -->
+        <button class="item-role" onclick="filterTag('data-role','Frontend'); showTag('Frontend-tag');showTagHeading()"><p>Frontend</p></button>
+        <!-- Level -->
+        <button class="item-level" onclick="filterTag('data-level','Junior'); showTag('Junior-tag');showTagHeading()"><p>Junior</p></button>
+        <!-- Languages -->
+        <button class="item-languages" onclick="filterTag('data-languages','HTML'); showTag('HTML-tag');showTagHeading()"><p>HTML</p></button>
+        <button class="item-languages" onclick="filterTag('data-languages','JavaScript'); showTag('JavaScript-tag');showTagHeading()"><p>JavaScript</p></button>
+        <!-- Tools -->
+        <button class="item-languages" onclick="filterTag('data-languages','Sass'); showTag('Sass-tag');showTagHeading()"><p>Sass</p></button>
+      </div>
+    </div>
+  </div>
+  <!-- Item End -->
+
+  <!-- Item Start -->
+  <div class="listed-item" data-role="Fullstack" data-level="Midweight" data-languages="JavaScript Python Django Sass">        
+    <div class="roundmask">
+      <a href="#"><img src="images/eyecam-co.svg" alt="Eyecam Co. Logo"></a>
+    </div>
+    <div class="listed-item-l">
+      <div class="top-line">
+        <p class="item-name">Eyecam Co.</p>
+      </div>
+      <h1 class="color_fifth category">Full Stack Engineer</h1>
+      <div class="bottom-line">
+        <span>3w ago</span>
+        <p class="info-separator">·</p>
+        <span>Full Time</span>
+        <p class="info-separator">·</p>
+        <span>Worldwide</span>
+      </div>
+  </div>
+  <div class="listed-item-r">
+      <div class="tags">
+        <!-- Role -->
+        <button class="item-role" onclick="filterTag('data-role','Fullstack'); showTag('Fullstack-tag');showTagHeading()"><p>Fullstack</p></button>
+        <!-- Level -->
+        <button class="item-level" onclick="filterTag('data-level','Midweight'); showTag('Midweight-tag');showTagHeading()"><p>Midweight</p></button>
+        <!-- Languages -->
+        <button class="item-languages" onclick="filterTag('data-languages','JavaScript'); showTag('JavaScript-tag');showTagHeading()"><p>JavaScript</p></button>
+        <button class="item-languages" onclick="filterTag('data-languages','Python'); showTag('Python-tag');showTagHeading()"><p>Python</p></button>
+        <!-- Tools -->
+        <button class="item-languages" onclick="filterTag('data-languages','Django'); showTag('Django-tag');showTagHeading()"><p>Django</p></button>
+        <button class="item-languages" onclick="filterTag('data-languages','Sass'); showTag('Sass-tag');showTagHeading()"><p>Sass</p></button>
+      </div>
+    </div>
+  </div>
+  <!-- Item End -->
+
+    <!-- Item Start -->
+  <div class="listed-item" data-role="Frontend" data-level="Junior" data-languages="JavaScript React Sass">        
+      <div class="roundmask">
+        <a href="#"><img src="images/the-air-filter-company.svg" alt="The Air Filter Company Logo"></a>
+      </div>
+      <div class="listed-item-l">
+        <div class="top-line">
+          <p class="item-name">The Air Filter Company</p>
+        </div>
+        <h1 class="color_fifth category">Front-end Dev</h1>
+        <div class="bottom-line">
+          <span>1mo ago</span>
+          <p class="info-separator">·</p>
+          <span>Part Time</span>
+          <p class="info-separator">·</p>
+          <span>Worldwide</span>
+        </div>
+    </div>
+    <div class="listed-item-r">
+        <div class="tags">
+          <!-- Role -->
+          <button class="item-role" onclick="filterTag('data-role','Frontend'); showTag('Frontend-tag');showTagHeading()"><p>Frontend</p></button>
+          <!-- Level -->
+          <button class="item-level" onclick="filterTag('data-level','Junior'); showTag('Junior-tag');showTagHeading()"><p>Junior</p></button>
+          <!-- Languages -->
+          <button class="item-languages" onclick="filterTag('data-languages','JavaScript'); showTag('JavaScript-tag');showTagHeading()"><p>JavaScript</p></button>
+          <!-- Tools -->
+          <button class="item-languages" onclick="filterTag('data-languages','React'); showTag('React-tag');showTagHeading()"><p>React</p></button>
+          <button class="item-languages" onclick="filterTag('data-languages','Sass'); showTag('Sass-tag');showTagHeading()"><p>Sass</p></button>
+        </div>
+      </div>
+    </div>
+    <!-- Item End -->
+
+  </div>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">G. Seclen Alfaro</a>.
+  </div>
+</body>
+</html>
